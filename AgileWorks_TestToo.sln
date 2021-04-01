@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWorks_TestToo", "AgileWorks_TestToo.csproj", "{2C94A62E-ED05-4440-BECB-9343E56A4C56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "..\Tests\Tests.csproj", "{39F89463-FDC4-46BC-8EE0-2ED79622E1FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C94A62E-ED05-4440-BECB-9343E56A4C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C94A62E-ED05-4440-BECB-9343E56A4C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C94A62E-ED05-4440-BECB-9343E56A4C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C94A62E-ED05-4440-BECB-9343E56A4C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F89463-FDC4-46BC-8EE0-2ED79622E1FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F89463-FDC4-46BC-8EE0-2ED79622E1FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F89463-FDC4-46BC-8EE0-2ED79622E1FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F89463-FDC4-46BC-8EE0-2ED79622E1FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3D7A242-EC09-4ACB-AADB-C611CAD3DFA1}
+	EndGlobalSection
+EndGlobal

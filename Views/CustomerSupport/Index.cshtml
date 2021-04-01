@@ -1,0 +1,87 @@
+﻿@using AgileWorks_TestToo.Models
+@model List<Problem>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    <p>Add problem to solve:</p>
+    <form action="@Url.Action("AddProblem")" method="POST">
+        <input type="text" class="input-lg col-xs-3" name="problem" autofocus required />
+        <input type="datetime-local" class="input-lg col-xs-3" id="completionTime" name="completionTime" min="2021-03-24T00:00" required />
+        <input type="submit" class="btn btn-success btn-lg" value="Submit">
+    </form>
+
+
+</div>
+<h3>@Model.Count() Problem(s)</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Time issued</th>
+            <th>Expected completed</th>
+            <th>Is completed</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var problem in Model)
+        {
+        <tr>
+            <td>@problem.Description</td>
+            <td>@problem.InputTime</td>
+            @if (problem.CompletionTime.Ticks - DateTime.Now.Ticks < 36000000000)
+            {
+                <td>
+                <p style="color:red">@problem.CompletionTime</p>
+                </td>
+            }
+            else
+            {
+                <td>
+                    @problem.CompletionTime
+                </td>
+            }
+            <td>
+                @{
+                    var url = Url.Action("RemoveProblem", "CustomerSupport", new { issueTime = problem.InputTime });
+                }
+                <input type="checkbox" onclick="window.location='@url'" />
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+     
+    document.getElementById("completionTime").onclick = function updateMinTime() {
+        var currentTime = new Date();
+        var dd = currentTime.getDate();
+        var mm = currentTime.getMonth() + 1; //January is 0!
+        var yyyy = currentTime.getFullYear();
+        var hh = currentTime.getHours();
+        var min = currentTime.getMinutes();
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+        if (hh < 10) {
+            hh = '0' + hh
+        }
+        if (min < 10) {
+            min = '0' + min
+        }
+        currentTime = yyyy + '-' + mm + '-' + dd + "T" + hh + ":" + min;
+        document.getElementById("completionTime").setAttribute("min", currentTime);
+    }
+
+</script>
+
+
