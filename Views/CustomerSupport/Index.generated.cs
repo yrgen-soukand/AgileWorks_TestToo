@@ -52,20 +52,20 @@ namespace ASP
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n\r\n<div");
+WriteLiteral("\r\n\r\n<div");
 
 WriteLiteral(" class=\"jumbotron\"");
 
 WriteLiteral(">\r\n    <p>Add problem to solve:</p>\r\n    <form");
 
-WriteAttribute("action", Tuple.Create(" action=\"", 169), Tuple.Create("\"", 203)
+WriteAttribute("action", Tuple.Create(" action=\"", 167), Tuple.Create("\"", 201)
             
-            #line 10 "..\..\Views\CustomerSupport\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 178), Tuple.Create<System.Object, System.Int32>(Url.Action("AddProblem")
+            #line 9 "..\..\Views\CustomerSupport\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 176), Tuple.Create<System.Object, System.Int32>(Url.Action("AddProblem")
             
             #line default
             #line hidden
-, 178), false)
+, 176), false)
 );
 
 WriteLiteral(" method=\"POST\"");
@@ -98,10 +98,10 @@ WriteLiteral(" class=\"btn btn-success btn-lg\"");
 
 WriteLiteral(" value=\"Submit\"");
 
-WriteLiteral(">\r\n    </form>\r\n\r\n\r\n</div>\r\n<h3>");
+WriteLiteral(">\r\n    </form>\r\n</div>\r\n<h3>");
 
             
-            #line 18 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 15 "..\..\Views\CustomerSupport\Index.cshtml"
 Write(Model.Count());
 
             
@@ -116,13 +116,13 @@ WriteLiteral(">\r\n    <thead>\r\n        <tr>\r\n            <th>Description</t
 "pleted</th>\r\n\r\n        </tr>\r\n    </thead>\r\n\r\n    <tbody>\r\n");
 
             
-            #line 31 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 28 "..\..\Views\CustomerSupport\Index.cshtml"
         
             
             #line default
             #line hidden
             
-            #line 31 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 28 "..\..\Views\CustomerSupport\Index.cshtml"
          foreach (var problem in Model)
         {
 
@@ -132,7 +132,7 @@ WriteLiteral(">\r\n    <thead>\r\n        <tr>\r\n            <th>Description</t
 WriteLiteral("        <tr>\r\n            <td>");
 
             
-            #line 34 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 31 "..\..\Views\CustomerSupport\Index.cshtml"
            Write(problem.Description);
 
             
@@ -141,7 +141,7 @@ WriteLiteral("        <tr>\r\n            <td>");
 WriteLiteral("</td>\r\n            <td>");
 
             
-            #line 35 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 32 "..\..\Views\CustomerSupport\Index.cshtml"
            Write(problem.InputTime);
 
             
@@ -150,13 +150,13 @@ WriteLiteral("</td>\r\n            <td>");
 WriteLiteral("</td>\r\n");
 
             
-            #line 36 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 33 "..\..\Views\CustomerSupport\Index.cshtml"
             
             
             #line default
             #line hidden
             
-            #line 36 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 33 "..\..\Views\CustomerSupport\Index.cshtml"
              if (problem.CompletionTime.Ticks - DateTime.Now.Ticks < 36000000000)
             {
 
@@ -170,7 +170,7 @@ WriteLiteral(" style=\"color:red\"");
 WriteLiteral(">");
 
             
-            #line 39 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 36 "..\..\Views\CustomerSupport\Index.cshtml"
                                 Write(problem.CompletionTime);
 
             
@@ -179,7 +179,7 @@ WriteLiteral(">");
 WriteLiteral("</p>\r\n                </td>\r\n");
 
             
-            #line 41 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 38 "..\..\Views\CustomerSupport\Index.cshtml"
             }
             else
             {
@@ -192,7 +192,7 @@ WriteLiteral("                <td>\r\n");
 WriteLiteral("                    ");
 
             
-            #line 45 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 42 "..\..\Views\CustomerSupport\Index.cshtml"
                Write(problem.CompletionTime);
 
             
@@ -201,7 +201,7 @@ WriteLiteral("                    ");
 WriteLiteral("\r\n                </td>\r\n");
 
             
-            #line 47 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 44 "..\..\Views\CustomerSupport\Index.cshtml"
             }
 
             
@@ -210,13 +210,13 @@ WriteLiteral("\r\n                </td>\r\n");
 WriteLiteral("            <td>\r\n");
 
             
-            #line 49 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 46 "..\..\Views\CustomerSupport\Index.cshtml"
                 
             
             #line default
             #line hidden
             
-            #line 49 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 46 "..\..\Views\CustomerSupport\Index.cshtml"
                   
                     var url = Url.Action("RemoveProblem", "CustomerSupport", new { issueTime = problem.InputTime });
                 
@@ -227,22 +227,22 @@ WriteLiteral("\r\n                <input");
 
 WriteLiteral(" type=\"checkbox\"");
 
-WriteAttribute("onclick", Tuple.Create(" onclick=\"", 1556), Tuple.Create("\"", 1588)
-, Tuple.Create(Tuple.Create("", 1566), Tuple.Create("window.location=\'", 1566), true)
+WriteAttribute("onclick", Tuple.Create(" onclick=\"", 1550), Tuple.Create("\"", 1582)
+, Tuple.Create(Tuple.Create("", 1560), Tuple.Create("window.location=\'", 1560), true)
             
-            #line 52 "..\..\Views\CustomerSupport\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1583), Tuple.Create<System.Object, System.Int32>(url
+            #line 49 "..\..\Views\CustomerSupport\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 1577), Tuple.Create<System.Object, System.Int32>(url
             
             #line default
             #line hidden
-, 1583), false)
-, Tuple.Create(Tuple.Create("", 1587), Tuple.Create("\'", 1587), true)
+, 1577), false)
+, Tuple.Create(Tuple.Create("", 1581), Tuple.Create("\'", 1581), true)
 );
 
 WriteLiteral(" />\r\n            </td>\r\n\r\n        </tr>\r\n");
 
             
-            #line 56 "..\..\Views\CustomerSupport\Index.cshtml"
+            #line 53 "..\..\Views\CustomerSupport\Index.cshtml"
         }
 
             
